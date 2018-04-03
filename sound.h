@@ -1,5 +1,6 @@
 //header file for processing sound (WAV) file.
 //define the wav header
+#define SAMPLERATE 16000
 typedef struct{
 	char chunkID[4];	//"RIFF"
 	unsigned int chunkSize; //4 bytes
