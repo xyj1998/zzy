@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <signal.h>
 #include "sound.h"
-
+#include "comm.h"
 int main(void){
 	int ret;
 	while(1){

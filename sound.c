@@ -2,6 +2,7 @@
 #include "screen.h"
 #include <stdio.h>
 #include <math.h>
+#include"comm.h"
 //function definition of displayWAVheader()
 void displayBar(char filename[]){
 	FILE *fp;
@@ -30,6 +31,9 @@ void displayBar(char filename[]){
 		bar(i, dB);
 #endif
 	}
+#ifdef COMM
+	sendToServer(rms_80);
+#endif
 }
 void displayWAVheader(char filename[]){
 	WAVHeader myhdr;
