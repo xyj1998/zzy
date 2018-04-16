@@ -1,5 +1,6 @@
 OBJ = main.o sound.o screen.o comm.o
 APPNAME = sound.a
+WAVNAME = test.wav
 TAR = final.tar
 
 $(APPNAME) : $(OBJ)
@@ -9,6 +10,6 @@ $(APPNAME) : $(OBJ)
 	gcc -c -o $@ $<
 
 clean :
-	rm $(OBJ) $(APPNAME)
+	rm $(OBJ) $(APPNAME) $(WAVNAME)
 archive :
-	tar cf $(TAR) *
+	tar cf $(TAR) *.c *.h README.txt
